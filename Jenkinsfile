@@ -76,6 +76,7 @@ pipeline {
             }
         }
     }
+}
     // if you want post block then place this cursur into last of the line
 
     
