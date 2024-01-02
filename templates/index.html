@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Flask To-Do App</title>
+</head>
+<body class="bodyContainer">
+    <div class="container">
+        <h1>Tasks To-Do</h1>
+        
+        <!-- Flash Messages -->
+        <!-- {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %} -->
+
+        <form action="{{ url_for('add') }}" method="post">
+            <label for="task">New Task:</label>
+            <input type="text" id="task" name="task" required>
+            <label for="due_date">Task Date:</label>
+            <input type="date" id="due_date" name="due_date" required>
+            <br/>
+            <button type="submit">Add Task</button>
+        </form>
+        <br>
+        <a href="{{ url_for('view_tasks') }}"><button>View Tasks</button></a>
+        <br>
+        <br>
+        <a href="{{ url_for('chat') }}"><button>View chat </button></a>
+    </div>
+</body>
+</html>
+
