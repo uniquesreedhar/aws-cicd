@@ -75,21 +75,8 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube Analysis') {
-    steps {
-        script {
-            dir('/var/jenkins_home/workspace/sam'){
-            def scannerHome = tool 'sonarqube'
-            withSonarQubeEnv() {
-                sh "${scannerHome}/bin/sonar-scanner -Dsonar.sources=app.py,unit.py,integration.py -Dsonar.coverageReportPaths=coverage.xml"
-            }
-            }
-        }
     }
-}
-    }
-
-} // if you want post block then place this cursur into last of the line
+    // if you want post block then place this cursur into last of the line
 
     
     //     post {
