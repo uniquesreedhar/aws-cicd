@@ -1,6 +1,6 @@
 [
   {
     "name": "Task",
-    "imageUri": "#{variables.Image}"
+    "imageUri": $Image
   }
 ]
