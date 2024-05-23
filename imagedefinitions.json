@@ -1,6 +1,6 @@
 [
   {
-    "name": "task",
-    "imageUri": "shekhar123reddy/ganesh:latest"
+    "name": "Task",
+    "imageUri": "#{variables.Image}"
   }
 ]
