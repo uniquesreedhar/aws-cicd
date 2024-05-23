@@ -1,6 +1,6 @@
 [
   {
     "name": "Task",
-    "imageUri": $Image
+    "imageUri": "$Image"
   }
 ]
